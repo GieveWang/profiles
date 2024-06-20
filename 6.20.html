@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>王勇的个人简介</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+        .banner {
+            background-image: url('images/bg.jpg'); /* Replace with your background image URL */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li {
+            margin: 0;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+        }
+        .section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .section h2 {
+            margin-bottom: 20px;
+        }
+        .about-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .about-container img {
+            margin: 0 50px;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+        .about-container .text {
+            max-width: 400px;
+            text-align: left;
+        }
+        .about-container .text p {
+            margin: 5px 0;
+        }
+        .education-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .education-item {
+            width: 32%;
+            text-align: left;
+        }
+        .education-item p {
+            margin: 5px 0;
+        }
+        .education-item p strong {
+            font-weight: bold;
+        }
+        .experience-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .experience-item {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .experience-item p {
+            margin: 5px 0;
+        }
+        .experience-item p strong {
+            font-weight: bold;
+        }
+        .skills {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1000px;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            gap: 20px;
+            text-align: center; /* Center align skill titles */
+        }
+        .skills .left, .skills .right {
+            width: 48%;
+        }
+        .skill-bar {
+            margin: 10px 2px;
+            text-align: left; /* Align skill bars content to the left */
+        }
+        .skill-bar span {
+            display: block;
+            font-weight: bold;
+        }
+        .bar {
+            width: 100%;
+            background-color: #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            height: 10px; /* Decrease height of progress bar */
+            margin-top: 5px; /* Add a bit of spacing between bars */
+        }
+        .bar div {
+            height: 100%;
+            background-color: #333; /* Set progress bar color to dark gray or black */
+            text-align: right;
+            padding-right: 5px;
+            line-height: 10px; /* Adjust line height to center text in the bar */
+            color: white;
+        }
+        .gallery img, .videos video {
+            max-width: 100%;
+            height: auto;
+            margin: 10px;
+        }
+        footer {
+            padding: 20px;
+            text-align: center;
+            background: #333;
+            color: white;
+        }
+
+        /* Updated styles for video section */
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .video-item {
+            width: calc(33.33% - 20px); /* Three videos in a row with 20px gap */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video-item video {
+            width: 100%; /* Ensures videos fill their containers */
+            height: auto; /* Maintains aspect ratio */
+        }
+
+        .video-item p {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        #sk{
+            width: 1000px;
+            top: 10px;
+            gap: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <h1>欢迎来到我的个人网站</h1>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="#home">首页</a></li>
+            <li><a href="#about">关于我</a></li>
+            <li><a href="#education">教育经历</a></li>
+            <li><a href="#experience">工作经历</a></li>
+            <li><a href="#skills">技能</a></li>
+            <li><a href="#gallery">图片展示区</a></li>
+            <li><a href="#videos">视频展示区</a></li>
+            <li><a href="#contact">联系我</a></li>
+        </ul>
+    </nav>
+
+    <section id="about" class="section">
+        <h2>关于我</h2>
+        <div class="about-container">
+            <img src="images/user.jpg" alt="个人照片"> <!-- Replace with your profile picture URL -->
+            <div class="text">
+                <p><strong>姓名:</strong> 王勇</p>
+                <p><strong>性别:</strong> 男</p>
+                <p><strong>出生年月:</strong> 1988年2月</p>
+                <p><strong>个人介绍:</strong></p>
+                <p>我从2012年开始从事影视传媒行业，先后在湖北卫视实习，三梦映画传媒公司，爱屋吉屋房产公司，浙商实业集团有限公司负责视频制作及拍摄相关工作，精通影视后期制作相关软件，</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="section">
+        <h2>教育经历</h2>
+        <div class="education-container">
+            <div class="education-item">
+                <p><strong>时间:</strong> 2010年9月 - 2014年6月</p>
+                <p><strong>专业:</strong> 计算机科学</p>
+                <p><strong>学校名称:</strong> 北京大学</p>
+                <p><strong>介绍:</strong> 这里是介绍文字。</p>
+            </div>
+            <div class="education-item">
+                <p><strong>时间:</strong> 2014年9月 - 2016年6月</p>
+                <p><strong>专业:</strong> 软件工程</p>
+                <p><strong>学校名称:</strong> 清华大学</p>
+                <p><strong>介绍:</strong> 这里是介绍文字。</p>
+            </div>
+            <div class="education-item">
+                <p><strong>时间:</strong> 2016年9月 - 2018年6月</p>
+                <p><strong>专业:</strong> 数据科学</p>
+                <p><strong>学校名称:</strong> 复旦大学</p>
+                <p><strong>介绍:</strong> 这里是介绍文字。</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section">
+        <h2>工作经历</h2>
+        <div class="experience-container">
+            <div class="experience-item">
+                <p><strong>时间:</strong> 2018年7月 - 2020年6月</p>
+                <p><strong>单位:</strong> 公司A</p>
+                <p><strong>城市:</strong> 北京</p>
+                <p><strong>职位:</strong> 软件工程师</p>
+                <p><strong>工作内容:</strong> 负责开发和维护公司内部系统。</p>
+            </div>
+            <div class="experience-item">
+                <p><strong>时间:</strong> 2017年4月 - 2019年4月</p>
+                <p><strong>单位:</strong> 上海浙商实业集团</p>
+                <p><strong>城市:</strong> 上海</p>
+                <p><strong>职位:</strong> 影视后期制作</p>
+                <p><strong>工作内容:</strong> 负责公司视频宣传制作，活动摄影，游学考察商务接待摄影摄像，大课摄像，视频直播。</p>
+            </div>
+            <div class="experience-item">
+                <p><strong>时间:</strong> 2022年7月 - 2023年6月</p>
+                <p><strong>单位:</strong> 公司C</p>
+                <p><strong>城市:</strong> 广州</p>
+                <p><strong>职位:</strong> 项目经理</p>
+                <p><strong>工作内容:</strong> 管理项目团队，制定项目计划并确保按时交付。</p>
+            </div>
+            <div class="experience-item">
+                <p><strong>时间:</strong> 2023年7月 - 至今</p>
+                <p><strong>单位:</strong> 公司D</p>
+                <p><strong>城市:</strong> 深圳</p>
+                <p><strong>职位:</strong> 技术总监</p>
+                <p><strong>工作内容:</strong> 负责公司的技术战略制定与实施。</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section skills">
+     <span id="sk"> <h2>技能</h2> </span>
+       <div class="left">
+            <div class="skill-bar">
+                <span>Adobe Photoshop</span>
+                <div class="bar">
+                    <div style="width: 80%;">80%</div>
+                </div>
+            </div>
+            <div class="skill-bar">
+                <span>Adobe Illustrator</span>
+                <div class="bar">
+                    <div style="width: 75%;">75%</div>
+                </div>
+            </div>
+            <div class="skill-bar">
+                <span>Adobe Premiere</span>
+                <div class="bar">
+                    <div style="width: 85%;">85%</div>
+                </div>
+            </div>
+            <div class="skill-bar">
+                <span>Adobe After Effects</span>
+                <div class="bar">
+                    <div style="width: 70%;">70%</div>
+                </div>
+            </div>
+            <div class="skill-bar">
+                <span>Adobe Audition</span>
+                <div class="bar">
+                    <div style="width: 65%;">65%</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="skill-bar">
+                <span>Cinema 4D</span>
+                <div class="bar">
+                    <div style="width: 60%;">60%</div>
+                </div>
+            </div>
+            <div class="skill-bar">
+                <span>摄影</span>
+                <div class="bar">
+                    <div style="width: 90%;">90%</div>
+                </div>
+            </div>
+            <div class="skill-bar">
+                <span>摄像</span>
+                <div class="bar">
+                    <div style="width: 85%;">85%</div>
+                </div>
+            </div>
+            <div class="skill-bar">
+                <span>照片视频直播</span>
+                <div class="bar">
+                    <div style="width: 75%;">75%</div>
+                </div>
+            </div>
+            <div class="skill-bar">
+                <span>无人机航拍</span>
+                <div class="bar">
+                    <div style="width: 70%;">70%</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="section gallery">
+        <h2>图片展示区</h2>
+        <img src="image1.jpg" alt="图片1">
+        <img src="image2.jpg" alt="图片2">
+        <!-- Add more images -->
+    </section>
+
+    <section id="videos" class="section videos">
+        <h2>视频展示区</h2>
+
+        <div class="video-container">
+            <div class="video-item">
+                <video controls>
+                    <source src="videos/01.大眼包子2023年会开场.mp4" type="video/mp4">
+                    您的浏览器不支持视频播放。
+                </video>
+                <p>大眼包子2023年会开场</p>
+            </div>
+            
+            <div class="video-item">
+                <video controls>
+                    <source src="videos/02.大眼包子年度销售先锋.mp4" type="video/mp4">
+                    您的浏览器不支持视频播放。
+                </video>
+                <p>大眼包子年度销售先锋表彰</p>
+            </div>
+
+            <div class="video-item">
+                <video controls>
+                    <source src="videos/03.大眼包子启动仪式.mp4" type="video/mp4">
+                    您的浏览器不支持视频播放。
+                </video>
+                <p>大眼包子启动仪式</p>
+            </div>
+
+            <div class="video-item">
+                <video controls>
+                    <source src="videos/04.2023.8.10人行多平台介绍.mp4" type="video/mp4">
+                    您的浏览器不支持视频播放。
+                </video>
+                <p>人行多平台介绍</p>
+            </div>
+    
+            <div class="video-item">
+                <video controls>
+                    <source src="videos/07.老板智慧11-23.mp4" type="video/mp4">
+                    您的浏览器不支持视频播放。
+                </video>
+                <p>老板智慧开场视频</p>
+            </div>
+
+            <div class="video-item">
+                <video controls>
+                    <source src="videos/08.道商宣传片1010.mp4" type="video/mp4">
+                    您的浏览器不支持视频播放。
+                </video>
+                <p>道商宣传片</p>
+            </div>
+
+            <div class="video-item">
+                <video controls>
+                    <source src="videos/09.济州岛.mp4" type="video/mp4">
+                    您的浏览器不支持视频播放。
+                </video>
+                <p>济州岛万盛咨询</p>
+            </div>
+
+            <div class="video-item">
+                <video controls>
+                    <source src="videos/10.中柬峰会10.11.mp4" type="video/mp4">
+                    您的浏览器不支持视频播放。
+                </video>
+                <p>中柬峰会</p>
+            </div>
+
+            <div class="video-item">
+                <video controls>
+                    <source src="videos/11.第一二届济州岛区块链行业论坛回顾.mp4" type="video/mp4">
+                    您的浏览器不支持视频播放。
+                </video>
+                <p>第一二届济州岛区块链行业论坛回顾</p>
+            </div>
+
+            <div class="video-item">
+                <video controls>
+                    <source src="videos/12.中柬商业协会宣传片（12-12）.mp4" type="video/mp4">
+                    您的浏览器不支持视频播放。
+                </video>
+                <p>中柬商业协会宣传片</p>
+            </div>
+
+
+
+
+
+
+
+
+
+            
+
+
+            <div class="video-item">
+                <video controls>
+                    <source src="videos/06.三根学院起航.mp4" type="video/mp4">
+                    您的浏览器不支持视频播放。
+                </video>
+                <p>三根学院起航仪式</p>
+            </div>
+
+            <div class="video-item">
+                <video controls>
+                    <source src="videos/05.2023.7.23人行多启动仪式.mp4" type="video/mp4">
+                    您的浏览器不支持视频播放。
+                </video>
+                <p>人行多启动仪式</p>
+            </div>
+
+           
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>联系我</h2>
+        <p>邮箱: gieve2023@163.com</p>
+        <p>电话: 17159411822</p>
+        <p>微信: Gieve2023</p>
+        <!-- Add more contact information -->
+    </section>
+
+    <footer>
+        <p>版权所有 &copy; gieve@163.com</p>
+    </footer>
+</body>
+</html>
